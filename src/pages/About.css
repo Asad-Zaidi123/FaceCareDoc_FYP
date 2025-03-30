@@ -1,0 +1,86 @@
+/* General styling for the About page container */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px; /* Reduced padding to prevent content from exceeding viewport */
+  background-color: #f9f9f9; /* Light background for contrast */
+  height: 80vh; /* Ensure the container fills the entire viewport height */
+  overflow: hidden; /* Prevent scrollbars by hiding any overflowing content */
+  box-sizing: border-box; /* Include padding in height calculations */
+}
+
+/* Flex container for image and text content */
+.about-content {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
+  height: 100%; /* Use full height of the parent container */
+  box-sizing: border-box; /* Ensure proper spacing */
+}
+
+/* Styling for the image section */
+.about-image {
+  flex: 1; /* Allows the image to take up space */
+  padding: 20px; /* Reduced padding for better fit */
+  max-height: 100%; /* Prevent image from exceeding container height */
+  display: flex;
+  align-items: center; /* Center image vertically */
+  justify-content: center; /* Center image horizontally */
+}
+
+.about-image img {
+  max-width: 100%; /* Responsive image */
+  max-height: 100%; /* Ensure image stays within its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 20px; /* Rounded corners */
+  object-fit: contain; /* Scale image without cropping */
+}
+
+/* Styling for the text section */
+.about-text {
+  flex: 2; /* Takes up more space than the image */
+  padding: 15px; /* Reduced padding for better fit */
+  background-color: white; /* White background for text contrast */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: auto; /* Allow scrolling if content exceeds its area */
+  max-height: calc(100vh - 100px); /* Ensure the text box fits within the viewport */
+  box-sizing: border-box; /* Include padding in height calculations */
+}
+
+.about-text h1 {
+  font-size: 28px; /* Adjusted size for better fit */
+  margin-bottom: 15px;
+  color: #2ecc71; /* Header color */
+}
+
+.about-text p {
+  font-size: 16px; /* Adjusted size for better fit */
+  line-height: 1.5;
+  color: #333; /* Text color */
+  text-align: justify; /* Justifies text to align both left and right edges */
+  text-justify: inter-word; /* Ensures words are spaced evenly */
+  margin: 0; /* Remove default margin for better alignment */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .about-content {
+      flex-direction: column; /* Stack the image and text vertically */
+  }
+
+  .about-image,
+  .about-text {
+      flex: 1; /* Equal space for image and text */
+      padding: 5px; /* Further reduced padding for small screens */
+      max-height: 50%; /* Adjust height for small screens */
+  }
+
+  .about-text {
+      max-height: 50vh; /* Adjust height to prevent scrolling on small screens */
+  }
+}

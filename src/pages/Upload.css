@@ -1,0 +1,181 @@
+/* Main container styling */
+.upload-container {
+  padding: 20px;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 39px auto 30px; /* Adjusts the top gap */
+}
+
+/* Upload box styling */
+.upload-box {
+  border: 2px dashed #2ecc71; /* Green dashed border */
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.upload-label {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #2ecc71;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.upload-label p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.upload-button {
+  background-color: white;
+  color: #2ecc71;
+  border: 2px solid #2ecc71;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  width: 100%; /* Ensure button adapts to container width */
+  max-width: 300px; /* Maximum width for larger screens */
+}
+
+.upload-button:hover {
+  background-color: #27ae60;
+  color: white;
+}
+
+/* File information section */
+.file-info {
+  margin-top: 10px;
+}
+
+.remove-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  width: 100%; /* Ensure button adapts to container width */
+  max-width: 335px; /* Maximum width for larger screens */
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.remove-button:hover {
+  background-color: rgb(146, 1, 1);
+}
+
+/* Start analysis button */
+.start-analysis-button {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+  display: block;
+  transition: background-color 0.3s;
+  width: 100%; /* Full width for better alignment */
+}
+
+.start-analysis-button:hover {
+  background-color: #27ae60;
+}
+
+.instructions-note {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Instructions styling */
+.instructions {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.instructions h2 {
+  margin-bottom: 10px;
+  color: #2ecc71;
+}
+
+.instructions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.instructions li {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .upload-container {
+    padding: 15px;
+    max-width: 90%; /* Reduce container width on tablets */
+  }
+
+  .upload-box {
+    padding: 15px;
+  }
+
+  .upload-button,
+  .remove-button,
+  .start-analysis-button {
+    max-width: 100%; /* Full-width buttons on smaller screens */
+  }
+
+  .instructions {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-container {
+    padding: 10px;
+    margin: 20px auto; /* Adjust margins for smaller screens */
+  }
+
+  .upload-label {
+    padding: 8px 15px; /* Smaller padding for smaller screens */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .upload-button,
+  .remove-button,
+  .start-analysis-button {
+    padding: 8px 12px; /* Adjust button padding */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .instructions h2 {
+    font-size: 18px; /* Adjust heading size */
+  }
+
+  .instructions li {
+    font-size: 12px; /* Adjust list font size */
+  }
+}
